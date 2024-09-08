@@ -4,7 +4,7 @@ let editBtn = document.querySelector("#edit-btn") as HTMLElement
 
 
 
-resumeForm?.addEventListener("submit", (evt)=>{
+resumeForm?.addEventListener("submit", (evt) => {
     evt.preventDefault()
     resumeOutput.style.display = "block"
 
@@ -15,7 +15,7 @@ resumeForm?.addEventListener("submit", (evt)=>{
     const experience = document.getElementById("experience") as HTMLInputElement
     const skills = document.getElementById("skills") as HTMLInputElement
 
-    if(!name || !email || !phone || !education || !experience || !skills){
+    if (!name || !email || !phone || !education || !experience || !skills) {
         alert("please fill all field");
         return;
     }
