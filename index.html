@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editable Resume</title>
+    <title>Milestone4 Resume</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style2.css">
   </head>
   <body>
     <div class="container1" id="cv-form">
-      <h1 style="text-align: center; color: white; padding: 10px 0; text-align: center; background-color: rgb(56, 47, 47); margin-bottom: 40px; letter-spacing: 2px; ">Editable Resume </h1>
+      <h1 style="text-align: center; color: white; padding: 10px 0; font-size: 1.4rem; text-align: center; background-color: rgb(56, 47, 47); margin-bottom: 40px; letter-spacing: 2px; ">Milestone5 Resume </h1>
       <div class="box1-generate">
         <!-- first col -->
         <div class="col1">
@@ -47,7 +48,17 @@
               placeholder="Enter Phone"
             />
         </div>
-        
+
+        <div class="form-group">
+          <label for="professionField">Profession</label>
+               <input
+               required
+                 type="text"
+                 id="professionField"
+                 class="form-control"
+                 placeholder="Enter Profession"
+               />
+           </div>
 
         <div class="form-group">
           <label for="currently_live">Currently Live</label>
@@ -63,6 +74,7 @@
         <div class="form-group">
           <label for="dateField" >Date of Birth</label>
                <input
+               required
                  type="date"
                  id="dateField"
                  class="form-control"
@@ -86,7 +98,7 @@
         <div class="form-group">
            <label for="addressField">Address</label>
             <textarea
-
+            required
               rows="2"
               type="text"
               id="addressField"
@@ -94,6 +106,17 @@
               placeholder="Enter here"
             ></textarea>
         </div>
+        <div class="form-group">
+          <label for="aboutField">About Yourself </label>
+           <textarea
+             rows="2"
+             required
+             type="text"
+             id="aboutField"
+             class="form-control"
+             placeholder="Enter here"
+           ></textarea>
+       </div>
           
           
           
@@ -114,7 +137,7 @@
                 <!-- Skills Section -->
                 <div class="form-group ">
                   <label for="skills">Skills</label>
-                  <textarea required rows="3" placeholder="comma (seperated)" id="skills" class="form-control sfield "></textarea>
+                  <textarea  rows="3" required placeholder="comma (seperated)" id="skills" class="form-control sfield "></textarea>
                 </div>
             </div>
            
@@ -125,17 +148,17 @@
 
         <!-- Education section -->
        <div class="form-group" id="education"  style="margin-top: 10px;">
-        <h3>Education</h3>
+        <h3 style="color: black;">Education</h3>
 
-        <!-- School -->
-        <label>School:</label>
-        <input required type="text" id="degree" placeholder="School Name" >
-        <label>Institution:</label>
-        <input required type="text" id="institution" placeholder="Institution" >
+      
+        <label>Degree:</label>
+        <input  type="text"required id="degree" placeholder="enter degree" >
+        <label >Institution:</label>
+        <input  type="text" required id="institution" placeholder="Institution" >
         <label>Start Year:</label>
-        <input required type="number" id="graduation-date-start">
+        <input  type="number" required id="graduation-date-start">
         <label>End Year:</label>
-        <input required type="number" id="graduation-date-end" >
+        <input  type="number" required id="graduation-date-end" >
 
 
       </div>
@@ -143,19 +166,19 @@
           
           <!-- Work Experience Section -->
       <div class="form-group" id="work-experience" style="margin-top: 30px;">
-        <h3>Work Experience</h3>
+        <h3 style="color: black;">Work Experience</h3>
         <label>Job Title:</label>
-        <input type="text" id="job-title" placeholder="Job Title" >
+        <input type="text" required id="job-title" placeholder="Job Title" >
 
         <label>Company:</label>
-        <input required type="text" id="company" placeholder="Company" >
+        <input  type="text" required id="company" placeholder="Company" >
 
         <label>Description:</label>
-        <input required type="text" id="job-description" placeholder="Job description" ></input>
+        <input  type="text required" id="job-description" placeholder="Job description" ></input>
         <label>Start Year:</label>
-        <input required type="number" id="start-date" >
+        <input  type="number" required id="start-date" >
         <label>End Year:</label>
-        <input required type="number" id="end-date" >      
+        <input  type="number" required id="end-date" >      
        </div>
      </div>
         
@@ -165,8 +188,6 @@
         <button>Generate CV</button>
       </div>
     </form>
-
-
   </div>
 
 
@@ -181,7 +202,7 @@
       <div class="box1">
         <div id="hide-img2">
           <img
-            src=""
+            src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1726790400&semt=ais_hybrid "
             alt="profile pic"
             width="100%"
             style="object-fit: cover"
@@ -189,38 +210,26 @@
             
           />
         </div>
-        <h1 id="nameT" style="letter-spacing: 5px; margin-bottom: 20px; text-align: center; color: rgb(255, 255, 255);">Ayesha Aziz</h1>
-        <h4
-          style="
-            padding: 5px 8px;
-            letter-spacing: 3px;
-            font-size: 20px;
-            text-align: center;
-            background-color: #835020;
-            margin: 40px 0 6px 0;
-            border-radius: 5px;
-          "
-        >
+        <h1 id="nameT" style="letter-spacing: 3px; margin-bottom: 20px; text-align: center; margin-top: 20px; color: rgb(254, 247, 247);">Ayesha Aziz</h1>
+        <h4 id="professionT">
           Web Developer
         </h4>
         
-        <div class="info">
-          <h5 class="head" style="margin-top: 50px; color: white;">PERSONAL INFORMATION</h5>
+        <div class="info" style="flex-wrap: wrap;">
+          <h5 class="head" style="margin-top: 30px; margin-bottom: 10px; color: rgb(255, 255, 255); ">PERSONAL INFORMATION</h5>
 
-          <div>
-            <h5>DOB</h5>
-            <p id="DOBT">26 / 02 /2006</p>
+          <div style="display: inline-flex;  align-items: center;">
+            <h5 ><pre>DOB :  </pre></h5> 
+            <p id="DOBT">26 / 02 /2006 </p>
           </div>
-          <div>
-            <h5>Currently Live</h5>
+       <br>
+          <div style="display: inline-flex; align-items: center;">
+            <h5 ><pre>Currently Live : </pre></h5>
             <p id="currentlyT">Karachi</p>
           </div>
-          <div>
-            <h5>Gender</h5>
-            <p id="genderT">Female</p>
-          </div>
-          <div>
-            <h5>Address</h5>
+          
+          <div style="display: inline-flex; align-items: center;">
+            <h5><pre>Address : </pre> </h5>
             <p id="addressT">Turk Market Baldia Town 3 Karachi</p>
           </div>
 
@@ -228,16 +237,16 @@
             Contact Me
           </h3>
 
-          <div style="margin-bottom: 10px">
-            <h5>Phone</h5>
+          <div style="margin-bottom: 10px; display: inline-flex; align-items: center;">
+            <h5><pre>Phone : </pre></h5>
             <p id="contactT">+923131148362</p>
           </div>
 
-          <div>
-            <h5>Email</h5>
+          <div style="display: inline-flex; align-items: center;">
+            <h5><pre>Email : </pre></h5>
             <p>
               <a id="emailT"
-                style="color: rgb(255, 255, 255); text-decoration: none"
+                style=" text-decoration: none; color: #AAACAF;"
                 href="mailto:moizaman3623@gmail.com"
                 >ayesha121@gmail.com</a
               >
@@ -245,74 +254,31 @@
           </div>
 
           <!-- Links -->
-          <div class="icons" style="margin-top: 50px; margin-bottom: 20px;">
-            <div>
-              <a  style="text-decoration: none; color: rgb(84, 68, 207);"  href="#1"><i class="fa-brands fa-linkedin"></i></a>
-              <h3 id="icons_manage">LINKEDIN</h3>
-              <p id="LinkedInT" style="padding: 4px 0;"></p>
+          <div class="icons" style="margin-top: 50px; overflow: hidden; margin-bottom: 20px; " >
+            <div >
+              <p style="font-size: 15px;"> <span >LinkedIn :</span> <a style=" color: #8b8484;" id="LinkedInT" href="#1" target="_blank"></a></p>
             </div>
 
             <div >
-              <a   href="#1" style="text-decoration: none; "  style="color: rgb(109, 104, 104) ">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <h3 id="icons_manage">GITHUB</h3>
-              <p id="githubT" style="padding: 4px 0;"></p>
+              <p style="font-size: 15px;"> <span >Github :</span> <a style=" color: #898686;" id="githubT" href="#1" target="_blank"></a></p>
             </div>
           </div>
-
           
         </div>
-      </div>
+        <div class="about" style="margin-top: 40px;">
+          <h2 class="head"  style="margin-bottom: 10px; letter-spacing: 2px; ">About me</h2>
+          <p id="aboutT" class="para">
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit quia doloremque tempore ut culpa sed sequi impedit veniam deserunt a!
 
-      <!-- image part -->
-      <div class="box2">
-        <div id="hide-img">
-          <img src="" alt="profile pic" id="imgTemplate"/>
+          </p>
         </div>
 
-        <!-- Education -->
-        <div class="education">
-          <h3 style="letter-spacing: 5px; font-size: 1.6rem; color: white;">EDUCATION</h3>
-          <!-- School -->
-          <div class="education_main">
-            <div class="edu-info">
-              <p id="round"></p>
-              <h2 style="color: #835020; padding-bottom: 10px; color:#ae6a2b;">School</h2>
-              <h4 id="display-degree" style="color: #21359e;"></h4>
-              <h3 style="display: flex; font-weight: 700;" ><p id="display-graduation-start"></p> <pre>  -   </pre> <p id="display-graduation-end"></p></h3>
-              <p>Institute:<p id="display-institution"></p></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Work Experience -->
-
-        <div class="experience">
-          <h3 style="letter-spacing: 5px; font-size: 1.3rem; color: white;">
-            WORK EXPERIENCE
-          </h3>
-          <div class="experience_main">
-            <div id="exp-1">
-              <p id="round2"></p>
-              <h4 id="display-job-title" style="color: #ae6a2b;">FRONTENED DEVELOPER</h4>
-              <h3 style="display: flex;"> <p id="display-company"></p> - Company</h3>
-              <h3 style="display: flex; font-weight: 700;">
-                <p id="display-start-date"></p> <pre>  -  </pre> <p id="display-end-date"></p>
-              </h3>
-              <p id="display-discription">hello</p>
-            </div>
-
-           
-          </div>
-        </div>
 
         
-
         <!-- Skills -->
         <div class="skills-contain" >
           <div class="" style="margin-top: 20px; margin-bottom: 20px;">
-              <h3 style="letter-spacing: 5px; font-size: 1.6rem">Skills</h3>
+              <h3 style="letter-spacing: 5px; ">Skills</h3>
           </div>
 
           <div class="skills">
@@ -327,6 +293,48 @@
           </div>
           <button id="skills-btn"></button>
         </div>
+
+      </div>
+
+      <!-- image part -->
+      <div class="box2">
+        <div id="hide-img">
+          <img src="https://img.freepik.com/premium-vector/stylish-default-user-profile-photo-avatar-vector-illustration_664995-352.jpg" alt="profile pic" id="imgTemplate" />
+        </div>
+
+        <!-- Education -->
+        <div class="education">
+          <h3 style="letter-spacing: 5px;">EDUCATION</h3>
+          <!-- School -->
+          <div class="education_main">
+            <div class="edu-info">
+              <p id="round"></p>
+              <h4 id="display-degree">Matric</h4>
+              <span style="display: flex; font-weight: 700; color: black;" ><p id="display-graduation-start"></p><pre>  to  </pre> <p id="display-graduation-end">2023</p></span>
+              <p style="margin-top: 20px; font-size: 1.1rem;font-weight: 700; color:black;">Institute<p id="display-institution" style="color: #000000; font-size: 15px;">SCHOOL/COLLEGE</p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+
+        <div class="experience">
+          <h3 style="letter-spacing: 5px;">
+            WORK EXPERIENCE
+          </h3>
+          <div class="experience_main">
+            <div id="exp-1">
+              <p id="round2"></p>
+              <h4 id="display-job-title" >FRONTENED DEVELOPER</h4>
+              <span style="display: flex;color: black;"> <p id="display-company">Amazon </p> - Company</span>
+              <span style="display: flex; font-weight: 700; color: black;">
+                <p id="display-start-date" >2022</p><pre>  to  </pre> <p id="display-end-date">2024</p>
+              </span>
+              <p id="display-discription" style="color: #000000; font-size: 15px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, ad!</p>
+            </div>     
+          </div>
+        </div>
+
 
     </div>
   </div>
@@ -346,6 +354,8 @@
   
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

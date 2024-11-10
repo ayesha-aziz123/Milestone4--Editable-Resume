@@ -1,9 +1,9 @@
+
 let cvform = document.querySelector("#cv-form") as HTMLFormElement;
 let skillBtn = document.querySelector("#skills-btn") as HTMLButtonElement;
 let skillList = document.querySelector(".skills") as HTMLElement;
 let editbtn = document.getElementById("edit") as HTMLElement;
 let cvTemplate = document.getElementById("cv-template") as HTMLFormElement;
-
 
 skillBtn.innerHTML = "Hide Skills";
 
@@ -35,18 +35,14 @@ cvform?.addEventListener("submit", (e: Event) => {
   const graduationDateStart = (document.getElementById("graduation-date-start") as HTMLInputElement).value;
   const graduationDateEnd = (document.getElementById("graduation-date-end") as HTMLInputElement).value;
 
-  // College
-  // const degree2 = (document.getElementById("degree2") as HTMLInputElement).value;
-  // const institution2 = (document.getElementById("institution2") as HTMLInputElement).value;
-  // const collegeDateStart = (document.getElementById("college-end-date") as HTMLInputElement).value;
-  // const collegeDateEnd = (document.getElementById("college-start-date") as HTMLInputElement).value;
-
 
   const jobTitle = (document.getElementById("job-title") as HTMLInputElement).value;
   const company = (document.getElementById("company") as HTMLInputElement).value;
   const startDate = (document.getElementById("start-date") as HTMLInputElement).value;
   const endDate = (document.getElementById("end-date") as HTMLInputElement).value;
   const jobDescription = (document.getElementById("job-description") as HTMLInputElement).value;
+  const profession = (document.getElementById("professionField") as HTMLInputElement).value;
+  const about = (document.getElementById("aboutField") as HTMLInputElement).value;
 
 
   // links
@@ -61,19 +57,13 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("contactT") as HTMLElement).textContent = phone;
   (document.getElementById("emailT") as HTMLElement).textContent = email;
   (document.getElementById("addressT") as HTMLElement).textContent = address;
+  (document.getElementById("aboutT") as HTMLElement).textContent = about;
 
   // School
   (document.getElementById("display-degree") as HTMLElement).textContent = degree;
   (document.getElementById("display-institution") as HTMLElement).textContent = institution;
   (document.getElementById("display-graduation-start") as HTMLElement).textContent = graduationDateStart;
   (document.getElementById("display-graduation-end") as HTMLElement).textContent = graduationDateEnd;
-
-  // College
-  // (document.getElementById("display-degree2") as HTMLElement).textContent = degree2;
-  // (document.getElementById("display-institution2") as HTMLElement).textContent = institution2;
-  // (document.getElementById("display-graduation-start2") as HTMLElement).textContent = collegeDateStart;
-  // (document.getElementById("display-graduation-end2") as HTMLElement).textContent = collegeDateEnd;
-
 
 
 
@@ -85,6 +75,7 @@ cvform?.addEventListener("submit", (e: Event) => {
   (document.getElementById("display-start-date") as HTMLElement).textContent = startDate;
   (document.getElementById("display-end-date") as HTMLElement).textContent = endDate;
   (document.getElementById("display-discription") as HTMLElement).textContent = jobDescription;
+  (document.getElementById("professionT") as HTMLElement).textContent = profession;
 
 
   // ******* Skills *********
@@ -118,17 +109,16 @@ cvform?.addEventListener("submit", (e: Event) => {
 
   (document.getElementById("cv-form") as HTMLElement).style.display = "none";
   (document.getElementById("cv-template") as HTMLElement).style.display = "block";
- 
+
+  let names = document.getElementById("nameField") as HTMLInputElement;
+
+  
 
 });
 
-function printCV() {
-  window.print();
-}
 
 editbtn?.addEventListener("click", () => {
   cvform.style.display = "block";
   cvTemplate.style.display = "none"
-
-
 })
+
